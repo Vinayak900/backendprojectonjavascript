@@ -15,7 +15,7 @@ const registerUser = asyncHandler( async(req,res)=>{
 //return response if user created
 
 //get user details
-const {username,password,email}=req.body
+const {fullname,username,password,email}=req.body
 
 //validation - not empty
 if([fullname,username,password,email].some((fields)=> fields?.trim()==="")){
