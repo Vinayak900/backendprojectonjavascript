@@ -9,7 +9,7 @@ import fs  from "fs";//it helps to read file and write
     api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
-const uploadOnCloudinary = async (localFilePath)=>{
+ const uploadOnCloudinary = async (localFilePath)=>{
 try{
 if(!localFilePath){
     return null
@@ -27,3 +27,5 @@ return response
   fs.unlinkSync(localFilePath) //remove the locally saved temporary file 
 }
 }
+
+export{uploadOnCloudinary}
